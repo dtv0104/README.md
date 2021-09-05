@@ -6,13 +6,15 @@
 
 ## 1-2 在TinkerCAD開一個新的Circuit, 分別使甪R, G, B三種顏色的LED, ON (亮) 0.5秒, OFF(滅) 0.5秒
 
-![image](https://user-images.githubusercontent.com/89329178/132113733-e90cc111-f28e-4434-9865-7a913199dd96.png)
+![image](https://user-images.githubusercontent.com/89329178/132114077-fd422286-9aa8-4bb6-b7db-b5cc6652502e.png)
+
 
 ```` C
-
 void setup()
 {
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(13, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(9, OUTPUT);
 }
 
 void loop()
@@ -27,5 +29,35 @@ void loop()
   digitalWrite(11, LOW);
   digitalWrite(9, LOW);
   delay(500); // Wait for 500 millisecond(s)
+}
+
+````
+## 1-3 在TinkerCAD開一個新的Circuit, 分別使甪R, G, B三種顏色的LED, 讓LED ON, OFF的順序為R >> G >> B >> G >> R .... 無限循環
+
+![image](https://user-images.githubusercontent.com/89329178/132114501-80d56c3b-b437-46c1-b829-c8bbb2acff5b.png)
+
+```` c
+void setup()
+{
+  pinMode(13, OUTPUT);
+  
+}
+
+void loop()
+{
+  
+  digitalWrite(13, HIGH);
+  delay(500);
+  digitalWrite(13, LOW);
+  delay(500);
+  digitalWrite(11, HIGH);
+  delay(500);
+  digitalWrite(11, LOW);
+  delay(500);
+  digitalWrite(9, HIGH);
+  delay(500);
+  digitalWrite(9, LOW);
+  delay(500);
+  
 }
 ````
