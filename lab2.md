@@ -24,7 +24,8 @@ void loop()
 
 ## 實作2-2, RGB LED燈全彩模組, 分別讓LED輪流表現正紅、正綠、正藍，三個顏色，時間間隔1秒鐘。並且觀查LED顏色和波形或是電壓有什麼關連性? 可將個人說明在更新GitHub時一起加入
 
-![image](https://user-images.githubusercontent.com/89329178/132115267-324e4828-0be0-4f47-92ff-53de6d61135a.png)
+![image](https://user-images.githubusercontent.com/89329178/132970668-29336a84-abff-4f1d-adb7-7f249dc64099.png)
+
 
 ```` c
 int R = 9;
