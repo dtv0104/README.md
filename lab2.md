@@ -58,12 +58,12 @@ void loop()
 
 ## 實作2-3, 讓你的RGB LED燈全彩模組也可會"呼吸", LED顏色變化是否有像"呼吸的效果"和示波器的波形有什麼關連性?
 
-![image](https://user-images.githubusercontent.com/89329178/132971010-cab194d1-7f3d-422e-942d-b6105dbc4b4d.png)
+![image](https://user-images.githubusercontent.com/89329178/132971142-c283d4d4-fc9f-415b-bebb-0a8c210b62c0.png)
 
 ```` c
-int Red = 11;
-int Green = 10;
-int Blue = 9;
+int Red = 9;
+int Blue = 10;
+int Green = 11;
 int i = 0;
 int j = 0;
 void swapLED(int j, int i) {
