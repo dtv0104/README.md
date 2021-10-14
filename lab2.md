@@ -134,3 +134,28 @@ void loop()
   delay(10); // Delay a little bit to improve simulation performance
 }
 ````
+## 實作2-5: 按下按鍵, Green LED亮 & Red LED滅; 放開按鍵, Green LED滅 & Red LED亮. 想要再深入的同學可以試試喔. (思考方向: digitalRead(), digitalWrite(): 按鍵 +序列輸出 + LED)
+![134792536-1eff526e-406f-46c9-9cec-464c6d4c47e1](https://user-images.githubusercontent.com/89329178/137320367-1775c583-4024-4aa8-8635-724f84d571ac.gif)
+```` c
+int buttonState = 0;
+
+void setup()
+{
+  pinMode(2, INPUT);
+}
+
+void loop()
+{
+  buttonState = digitalRead(2);
+  if (buttonState == HIGH) {
+  
+    digitalWrite(13, HIGH);
+    digitalWrite(8, LOW);  
+  } else {
+    
+    digitalWrite(13, LOW);
+    digitalWrite(8, HIGH);
+  }
+  delay(10); 
+}
+````
