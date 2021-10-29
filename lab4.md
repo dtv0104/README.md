@@ -72,3 +72,24 @@ void loop()
   seg71(1, 1, 1, 1, 1, 1, 1, 1); // 8
   seg71(1, 1, 1, 1, 0, 1, 1, 1); // 9 }
 ````
+
+## Lab 4-3 LCD顯示"Hello" + 你的英文名字
+![image](https://user-images.githubusercontent.com/89329178/139427847-0fad0a1b-598d-4436-abf9-c1af8c8f2939.png)
+```` c
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+void setup() {
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  lcd.print("hello, ETHAN!");
+}
+
+void loop() {
+  // set the cursor to column 0, line 1
+  // (note: line 1 is the second row, since counting begins with 0):
+  lcd.setCursor(0, 1);
+  // print the number of seconds since reset:
+  lcd.print(millis() / 1000);
+}
+````
