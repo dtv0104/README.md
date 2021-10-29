@@ -17,21 +17,21 @@ void setup()
 
 void loop()
 {
-// 
+ 
   for (pos = 0; pos <= 180; pos += 1) {
 
     servo_9.write(pos);
        
 
-    delay(50); // 等50ms (0.05秒)
+    delay(50); 
   }
   
   for (pos = 180; pos >= 0; pos -= 1) {
-// 
+ 
     servo_9.write(pos);
         
 
-    delay(50); // 
+    delay(50); 
   }
 }
 ````
@@ -51,13 +51,13 @@ void setup() {
 }
 
 void loop() {
-  int reading = analogRead(A1);  // read analog level (2^10)
+  int reading = analogRead(A1); 
   lcd.setCursor(0,0);  
   lcd.print("TMP Sensor Demo");
 
   float voltage = (reading/1024.0) * 5.0; // Convert to voltage
   
-  // converting from 10mv per degree with 500mV offset  
+  
   float tempC = (voltage - 0.5) * 100.0; 
   lcd.setCursor(0,1);
   lcd.print("Tmp:");
