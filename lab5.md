@@ -46,7 +46,7 @@ LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 void setup() {
   lcd.begin(16, 2);
   Serial.begin(9600);	
-  pinMode(A1, INPUT); // Read analog voltage (2^10)
+  pinMode(A1, INPUT);
 
 }
 
@@ -55,7 +55,7 @@ void loop() {
   lcd.setCursor(0,0);  
   lcd.print("TMP Sensor Demo");
 
-  float voltage = (reading/1024.0) * 5.0; // Convert to voltage
+  float voltage = (reading/1024.0) * 5.0; 
   
   
   float tempC = (voltage - 0.5) * 100.0; 
