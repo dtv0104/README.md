@@ -37,28 +37,43 @@ void loop()
 ````
 
 ## 5-2 LCD顯示溫度感應器的溫度;若溫度<38 綠LED亮; 若大於38度, 紅色LED亮, 細節請參考以下Demo
-![138580337-0df1ea4e-3d0e-42b2-8e2b-466d61b5d92d](https://user-images.githubusercontent.com/89329178/139423882-49a997f3-18b8-46d5-90dc-137892eabe8c.gif)
+
+
+https://user-images.githubusercontent.com/89329178/139429888-e8885466-229d-4051-8d32-32254fa5af9f.mp4
+
 ```` c
 #include <LiquidCrystal.h>
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+int RLED = 9;
+int GLED = 8;
 
-void setup() {
+void setup() 
+{
   lcd.begin(16, 2);
   Serial.begin(9600);	
-  pinMode(A1, INPUT);
+  pinMode(A1, INPUT); // Read analog voltage level (2^10)
 
 }
 
-void loop() {
-  int reading = analogRead(A1); 
+void loop() 
+{
+  int reading = analogRead(A1);  // read analog level level (2^10)
   lcd.setCursor(0,0);  
   lcd.print("TMP Sensor Demo");
 
-  float voltage = (reading/1024.0) * 5.0; 
-  
-  
-  float tempC = (voltage - 0.5) * 100.0; 
+  float voltage = (reading/1024.0) * 5.0;
+  float tempC = (voltage - 0.5) * 100.0;
+  if(tempC<38)
+  {
+    digitalWrite(RLED, LOW);
+    digitalWrite(GLED, HIGH); 
+  }
+  else
+    {
+      digitalWrite(RLED, HIGH);
+      digitalWrite(GLED, LOW);
+    }
   lcd.setCursor(0,1);
   lcd.print("Tmp:");
   lcd.print(tempC);
