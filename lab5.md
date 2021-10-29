@@ -17,7 +17,7 @@ void setup()
 
 void loop()
 {
-// 從 0 到 180 度逐步掃描伺服, 1度/步
+// 
   for (pos = 0; pos <= 180; pos += 1) {
 
     servo_9.write(pos);
@@ -27,11 +27,11 @@ void loop()
   }
   
   for (pos = 180; pos >= 0; pos -= 1) {
-// 從 180 到 0 度逐步掃描伺服, 1度/步
+// 
     servo_9.write(pos);
         
 
-    delay(50); // 等50ms (0.05秒)
+    delay(50); // 
   }
 }
 ````
