@@ -51,6 +51,9 @@ def printName(firstName, lastName, isCool, num):
 
 # Start
 printName('Ethan', 'Ethan', True, 10)
-![螢幕擷取畫面 2021-12-19 223216](https://user-images.githubusercontent.com/89329178/146678659-5b4ff9fd-5425-44c0-b2e0-fce972e4c813.png)
+````
+![223216](https://user-images.githubusercontent.com/89329178/146678779-51d86533-9af5-4027-b042-3759cc1086df.png)
+
 # Lab 7-3 確認Lab7完成的兩個Notebook都成功的存在你的雲端硬碟/ES2021目錄下
-![141666966-a2d44ad3-e4bc-4670-b562-2a75dd01c19a](https://user-images.githubusercontent.com/89329178/146678685-64b434ae-74e8-4055-8494-69bc7e861d9d.png)
+![141666966-a2d44ad3-e4bc-4670-b562-2a75dd01c19a](https://user-images.githubusercontent.com/89329178/146678785-ef5f131c-cd45-4b97-8a92-cc1be0ed0549.png)
+
